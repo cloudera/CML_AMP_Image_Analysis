@@ -1,0 +1,54 @@
+name: Image Analysis
+description: Prototype to demonstrate semantic image search
+author: Cloudera Engineer
+specification_version: 1.0
+prototype_version: 1.0
+date: "2020-09-29"
+api_version: 1
+
+ 
+
+tasks:
+  - type: create_job
+    name: Install dependencies
+    entity_label: install_deps
+    script: cml/install_dependencies.py
+    arguments: None
+    short_summary: Job to install dependencies and download training data.
+    cpu: 2
+    memory: 4
+    environment:
+      TASK_TYPE: CREATE/RUN_JOB
+    kernel: python3
+
+  - type: run_job
+    entity_label: install_deps
+    short_summary: Running install dependencies training job.
+    long_summary: >-
+      Running the job to install dependencies.
+
+  - type: create_job
+    name: Create FAISS index
+    entity_label: create_index
+    script: cml/create_index.py
+    arguments: None
+    short_summary: Job to create FAISS index.
+    cpu: 2
+    memory: 4
+    environment:
+      TASK_TYPE: CREATE/RUN_JOB
+    kernel: python3
+
+  - type: run_job
+    entity_label: create_index
+    short_summary: Running FAISS index creation job.
+    long_summary: >-
+      Running FAISS index creation job.
+
+  - type: start_application
+    name: Application to serve UI
+    subdomain: imageanalysis
+    script: app/backend/app.py
+    environment_variables:
+      TASK_TYPE: START_APPLICATION
+    kernel: python3

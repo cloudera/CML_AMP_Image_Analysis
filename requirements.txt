@@ -1,0 +1,5 @@
+tensorflow
+faiss-cpu
+pillow
+flask
+flask_cors
