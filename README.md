@@ -13,7 +13,7 @@ To enable semantic search applications, a few prerequisites steps are helpful.
 
 ## Instructions
 
-This repo provides scripts and examples that can help you get started with semantic search on your own dataset. The repo also provides a [tutorial](/notebooks/Tutorial.ipynb) notebook with visualizations that walks through the basics.
+This repo provides scripts and examples that can help you get started with semantic search on your own dataset. The repo also provides a [tutorial](/notebooks/Semantic Image Search Tutorial.ipynb) notebook with visualizations that walks through the basics.
 Repo structure and brief description of content is provided below:
 
     ├── app
