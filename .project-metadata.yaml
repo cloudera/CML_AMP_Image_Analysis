@@ -45,6 +45,7 @@ tasks:
 
   - type: start_application
     name: Application to serve UI
+    short_summary: Create an application to serve the image analysis UI
     subdomain: imageanalysis
     script: app/backend/app.py
     environment_variables:
