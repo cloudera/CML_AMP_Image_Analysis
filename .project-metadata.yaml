@@ -1,12 +1,10 @@
 name: Image Analysis
 description: Prototype to demonstrate semantic image search
-author: Cloudera Engineer
+author: Cloudera Inc.
 specification_version: 1.0
 prototype_version: 1.0
 date: "2020-09-29"
 api_version: 1
-
- 
 
 tasks:
   - type: create_job
