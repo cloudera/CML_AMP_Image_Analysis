@@ -1,5 +1,5 @@
-tensorflow
-faiss-cpu
-pillow
-flask
-flask_cors
+tensorflow==2.4.0
+faiss-cpu==1.6.5
+pillow==8.0.1
+flask==1.1.2
+flask_cors==3.0.9
