@@ -4,3 +4,4 @@ faiss-cpu==1.7.2
 pillow==9.0.0
 flask==2.0.3
 flask_cors==3.0.10
+Werkzeug==2.1.0
