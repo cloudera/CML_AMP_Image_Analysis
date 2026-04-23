@@ -1,7 +1,7 @@
-tensorflow==2.8.0
-protobuf==3.20
-faiss-cpu==1.7.2
-pillow==9.0.0
-flask==2.0.3
-flask_cors==3.0.10
-Werkzeug==2.1.0
+tensorflow==2.16.1
+protobuf==4.25.3
+faiss-cpu==1.8.0
+pillow==10.4.0
+flask==3.0.3
+flask_cors==4.0.1
+Werkzeug==3.0.3
