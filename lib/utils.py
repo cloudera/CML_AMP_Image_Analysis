@@ -38,7 +38,7 @@
 #
 # ###########################################################################
 
-from tensorflow.keras.preprocessing import image as imageprep
+from tensorflow.keras.utils import load_img, img_to_array
 import os
 import numpy as np
 from PIL import Image
@@ -48,14 +48,14 @@ from io import BytesIO
 
 
 def image_to_np_array(img_path, image_size):
-    img = imageprep.load_img(img_path, target_size=(image_size, image_size))
-    img = imageprep.img_to_array(img)
+    img = load_img(img_path, target_size=(image_size, image_size))
+    img = img_to_array(img)
     return img
 
 
 def to_np_array(img, image_size):
     img = img.resize((image_size, image_size))
-    img = imageprep.img_to_array(img)
+    img = img_to_array(img)
     if (img.shape[2] == 4):
         img = img[..., :3]
     return img
@@ -64,7 +64,7 @@ def to_np_array(img, image_size):
 def file_to_np_array(file, image_size):
     img = Image.open(file)
     img = img.resize((image_size, image_size))
-    img = imageprep.img_to_array(img)
+    img = img_to_array(img)
     if (img.shape[2] == 4):
         img = img[..., :3]
     return img
